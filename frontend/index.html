@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>X-Ray AI</title>
+    <link rel="icon" type="image/svg+xml" href="/static/favicon.svg" />
+    <link rel="stylesheet" href="/static/style.css"/>
+</head>
+<body>
+
+<div class="app">
+
+    <section class="hero">
+        <div>
+            <h1>X-Ray AI</h1>
+        </div>
+
+        <div class="upload-box">
+            <input id="fileInput" type="file" accept="image/png, image/jpeg" hidden />
+            <label for="fileInput" class="upload-btn">
+                Загрузить снимок
+            </label>
+        </div>
+    </section>
+
+    <section class="controls">
+        <div class="control-card">
+            <span>Интенсивность Grad-CAM</span>
+            <input id="camSlider" type="range" min="0" max="100" value="45">
+        </div>
+    </section>
+
+    <main class="content">
+
+        <section class="image-panel">
+            <div class="image-card">
+                <div class="image-wrapper" id="imageWrapper">
+
+                    <img id="xrayImage" class="base-img" src="" alt="X-Ray" />
+
+                    <div id="heatmapLayer" class="heatmap-layer"></div>
+
+                    <div id="emptyState" class="empty-state">
+                        <label for="fileInput" class="empty-upload">
+                            <div class="empty-icon">+</div>
+                            <div class="empty-title">Загрузите рентген-снимок</div>
+                            <div class="empty-button">Выбрать фото</div>
+                        </label>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <aside id="resultsPanel" class="results-panel"></aside>
+    </main>
+
+    <div id="medicalDisclaimer">
+        ⚠️ Данный проект является демонстрационной AI-системой и не является медицинским оборудованием.
+        Результаты не могут использоваться для постановки диагноза.
+    </div>
+
+</div>
+
+<script src="/static/script.js"></script>
+</body>
+</html>
