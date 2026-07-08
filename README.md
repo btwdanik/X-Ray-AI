@@ -86,8 +86,7 @@ X-ray-AI/
 ├── backend/
 │   ├── main.py
 │   └── model/
-│       ├── densenet121_xray_512_best.pth
-│       └── densenet121_xray_512_old.pth
+│       └── densenet121_xray_512_best.pth
 ├── frontend/
 │   ├── favicon.svg
 │   ├── index.html
