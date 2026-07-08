@@ -82,7 +82,7 @@ No finding - Без атологических находок
 ## Структура проекта
 
 ```text
-X-ray-AI/
+X-Ray-AI/
 ├── backend/
 │   ├── main.py
 │   └── model/
